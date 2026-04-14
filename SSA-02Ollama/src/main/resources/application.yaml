@@ -1,0 +1,34 @@
+server:
+  port: 8082
+
+  #\u5927\u6A21\u578B\u5BF9\u8BDD\u4E2D\u6587\u4E71\u7801UTF8\u7F16\u7801\u5904\u7406
+  # 防止乱码
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+
+spring:
+  application:
+    name: SAA-02Ollama
+
+  # ====SpringAIAlibaba Config=============
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      base-url: http://localhost:11434
+
+    ollama:
+      chat:
+        model: qwen3:4b
+#spring.ai.dashscope.base-url: https://dashscope.aliyuncs.com/compatible-mode/v1
+#spring.ai.dashscope.chat.options.model: deepseek-v3
+
+
+# ====SpringAI Config=============
+#\u901A\u8FC7openai\u534F\u8BAE\u8C03\u7528\u901A\u4E49\u5343\u95EE
+#spring.ai.openai.api-key: ${aliQwen-api}
+#spring.ai.openai.base-url: https://dashscope.aliyuncs.com/compatible-mode
+#spring.ai.openai.chat.options.model: qwen-plus

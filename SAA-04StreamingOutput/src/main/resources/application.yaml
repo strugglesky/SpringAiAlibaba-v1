@@ -1,0 +1,19 @@
+server:
+  port: 8084
+
+  # 防止乱码
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+
+spring:
+  application:
+    name: SAA-04StreamingOutput
+
+  # ====SpringAIAlibaba Config=============
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
