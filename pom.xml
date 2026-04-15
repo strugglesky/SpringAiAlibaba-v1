@@ -12,12 +12,13 @@
 
     <modules>
 
-        <module>SSA-01HelloWorld</module>
-        <module>SSA-02Ollama</module>
+        <module>SAA-01HelloWorld</module>
+        <module>SAA-02Ollama</module>
         <module>SAA-03ChatClient</module>
         <module>SAA-04StreamingOutput</module>
         <module>SAA-05Prompt</module>
         <module>SAA-06PromptTemplate</module>
+        <module>SAA-07StructuredOutput</module>
     </modules>
 
     <properties>

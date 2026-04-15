@@ -9,7 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>SAA-06PromptTemplate</artifactId>
+    <artifactId>SAA-01HelloWorld</artifactId>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -22,7 +22,10 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <!--spring-ai-alibaba dashscope-->
+        <!-- 引入 springai alibaba DashScope 模型适配的 Starter
+        如果你在学习的过程中，如果你发现有疑惑的地方，欢迎你通过邮箱留言给阳哥。
+		邮箱：zzyybs@126.com我们一起迭代出更好的课程！谢谢你选择尚硅谷
+        -->
         <dependency>
             <groupId>com.alibaba.cloud.ai</groupId>
             <artifactId>spring-ai-alibaba-starter-dashscope</artifactId>
@@ -31,7 +34,7 @@
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <version>1.18.38</version>
+            <optional>true</optional>
         </dependency>
         <!--hutool-->
         <dependency>
@@ -77,5 +80,7 @@
             </snapshots>
         </repository>
     </repositories>
+
+
 
 </project>
