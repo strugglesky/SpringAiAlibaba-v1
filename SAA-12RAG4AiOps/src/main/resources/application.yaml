@@ -30,10 +30,3 @@ spring:
       username: default
       password:
 
-# 日志配置 - 用于查看Prompt内容
-logging:
-  level:
-    # Spring AI 相关日志
-    org.springframework.ai: DEBUG
-    # DashScope API 调用日志
-    com.alibaba.cloud.ai.dashscope: DEBUG

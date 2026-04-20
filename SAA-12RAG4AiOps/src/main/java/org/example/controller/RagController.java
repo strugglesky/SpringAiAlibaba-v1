@@ -46,24 +46,11 @@ public class RagController
         RetrievalAugmentationAdvisor advisor = RetrievalAugmentationAdvisor.builder()
                 .documentRetriever(VectorStoreDocumentRetriever.builder().vectorStore(vectorStore).build())
                 .build();
-        
-        // 构建 Prompt 并打印内容(用于调试)
-        Prompt prompt = new Prompt(
-                org.springframework.ai.chat.messages.UserMessage.builder().text(msg).build(),
-                org.springframework.ai.chat.messages.SystemMessage.builder().text(systemInfo).build()
-        );
-        
-        log.info("========== Prompt Debug Info (Before RAG) ==========");
-        log.info("Messages count: {}", prompt.getInstructions().size());
-        for (Message message : prompt.getInstructions()) {
-            log.info("Message Type: {}", message.getMessageType());
-            log.info("Message Content: {}", message.getText());
-            log.info("----------------------------------------");
-        }
-        log.info("====================================================");
 
         return chatClient
-                .prompt(prompt)
+                .prompt()
+                .system(systemInfo)
+                .user(msg)
                 .advisors(advisor)
                 .stream()
                 .content();
