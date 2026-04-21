@@ -1,0 +1,21 @@
+server:
+  port: 8016
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: SAA-16ClientCallBaiduMcpServer
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+    mcp:
+      client:
+        request-timeout: 20s
+        toolcallback:
+          enabled: true
+        stdio:
+          servers-configuration: classpath:/mcp-server.json5

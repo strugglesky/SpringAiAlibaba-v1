@@ -13,12 +13,12 @@ public class LocalMcpClientApplication {
         SpringApplication.run(LocalMcpClientApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public CommandLineRunner runBeanViewer(BeanViewer beanViewer) {
         return args -> {
             System.out.println("========== 所有 Bean 名称 ==========");
             beanViewer.printAllBeanNames();
             System.out.println("==================================");
         };
-    }
+    }*/
 }
