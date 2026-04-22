@@ -1,0 +1,17 @@
+server:
+  port: 8018
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: SAA-18TodayMenu
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
+      agent:
+        options:
+          app-id: ab62e70ac19d479caec2736b790eccdd
