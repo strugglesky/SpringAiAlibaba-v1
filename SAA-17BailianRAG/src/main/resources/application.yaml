@@ -1,0 +1,14 @@
+server:
+  port: 8017
+  servlet:
+    encoding:
+      enabled: true
+      force: true
+      charset: UTF-8
+
+spring:
+  application:
+    name: SAA-17BailianRAG
+  ai:
+    dashscope:
+      api-key: ${DASHSCOPE_API_KEY}
